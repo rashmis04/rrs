@@ -1,0 +1,1435 @@
+<!Doctype html>
+<html>
+    <head>
+        <style>
+            *{
+		box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+	}
+
+
+            /* DICOUNTCOUPON */
+            .Discount-coupon
+            {
+                width: 100%;
+                text-align: center;
+                background-color: black;
+                padding-top: 2.5px;
+                padding-bottom: 2.5px;
+            }
+            .Discount-coupon h3
+            {
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+            }
+
+            /* NAVBAR */
+            .logo
+            {
+                margin-left: 80px;
+                margin-top: 10px;
+                height: 60px;
+                width: 40px;
+            }
+            .img1:hover
+            {
+                background-color: lightgray;
+                padding: 2px 2px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .img2:hover
+            {
+                background-color: lightgray;
+                padding: 2px 2px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .img3:hover
+            {
+                background-color: lightgray;
+                padding: 2px 2px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #menu-bar
+            {
+                display: none;
+            }
+             label
+            {
+                position: absolute;
+                left: 5px;
+                top: 60px;
+                font-size: larger;
+                text-transform: capitalize;
+            }
+            nav
+            {
+                background-color: white;
+            }
+            ul
+            {
+                display: none;
+            }
+            nav ul li
+            {
+                list-style-type: none;
+            }
+            nav ul li a
+            {
+                text-decoration: none;
+                color: black;
+            }
+            nav li
+            {
+                list-style-type: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                display: block;
+                width: 50%;
+                padding: 10px 20px;
+                margin-top: 30px;
+                margin-left: 5px;
+            }
+            nav li:hover
+            {
+                color: lightgray;
+                border-radius: 2px;
+                cursor: pointer;
+            }
+            .submenu{
+		background: #fff;
+		width: 250px;
+        border-radius: 5px;
+        padding: 5px;
+		box-shadow: 2px 2px 15px #aaaaaa33;
+		display: none;
+	}
+    a
+    {
+        text-decoration: none;
+        color: black;
+    }
+	.submenu li
+    {
+        color: black;
+        width: 100%;
+        top: 0px;
+        padding: 2px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+	}
+    .submenu a:hover
+    {
+        color: lightgray;
+    }
+    .submenu li:hover
+    {
+        background-color: transparent;
+    }
+	.submenu-hover:hover .submenu{
+		display: block;
+        margin-top: 25px;
+
+	}
+            #menu-bar:checked ~ ul
+            {
+                display: initial;
+            }
+            .icons
+            {
+                position: absolute;
+                top: 60px;
+                right: 10px;
+            }
+
+            @media only screen and (min-width:800px)
+            {
+                #menu-bar{display: none;}
+                label{display: none;}
+                .logo{margin-top: 10px;
+                margin-left: 10px;
+            height: 100px;
+        width: 80px;}
+                ul
+                {
+                    display: inline-flex;
+                }
+            nav ul li
+            {
+                list-style-type: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                padding: 10px 30px;
+            }
+            nav ul 
+            {
+                position: absolute;
+                top: 40px;
+                left: 80px;
+            }
+            .submenu
+            {
+                margin-top: 60px;
+                margin-left: 70px;
+            }
+                
+            }
+
+
+            /* IMAGESLIDER */
+            .image-slider
+            {
+                width: 100%;
+                height: 100vh;
+                background-image: url(pexels-steve-johnson-2130474.jpg);
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                animation: changeimage 20s linear infinite;
+            }
+
+            @keyframes changeimage
+            {
+                0%{ background-image: url(pexels-steve-johnson-2130474.jpg);}
+                50%{ background-image: url(pexels-steve-johnson-2863264.jpg);}
+                100%{ background-image: url(pexels-steve-johnson-2025774.jpg);}
+            }
+
+            .lpheading h1
+            {
+                text-align: center;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                font-size: 50px;
+                padding-top: 170px;
+            }
+            .lpheading h2
+            {
+                text-align: center;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                font-size: 30px;
+                
+            }
+            .lpbutton
+            {
+                display: grid;
+                grid-template-columns: auto auto auto;
+               justify-content: center;
+               gap: 40px;
+               margin-top: 80px;
+            }
+            .lpbutton button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: white;
+                padding: 15px 25px;
+            }
+            .lpbutton button:hover
+            {
+                background-color: black;
+                border-radius: 3px;
+                color: white;
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+
+
+            /* FEATURED COLLECTION */
+            .fcheading1
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+                text-align: center;
+            }
+            .fcheading1 h1
+            {
+                margin-top: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .fcheading1 h3
+            {
+                margin-top: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+            }
+            .fcheading2
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+            }
+            .fcheading2 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 25px;
+                margin-top: 30px;
+            }
+            .fcheading2 button:hover
+            {
+                background-color: lightgray;
+                color: black;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .fcheading
+            {
+                display: none;
+            }
+            
+            
+            .fccard1
+            {
+                display: grid;
+                grid-template-columns: auto;
+                gap: 60px 60px;
+                margin-top: 30px;
+            }
+            .fccard2
+            {
+                display: grid;
+                grid-template-columns: auto;
+                gap: 60px 60px;
+                margin-top: 30px;
+            }
+            .card1
+            {
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .card2
+            {
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .card3
+            {
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .card4
+            {
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .card5
+            {
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .card6
+            {
+                padding-bottom: 30px;
+                text-align: center;
+            }
+            .card1 p
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 10px;
+            }
+            .card1 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 35px;
+                margin-right: 5px;
+                margin-top: 20px;
+            }
+            .card1 button:hover
+            {
+                background-color: black;
+                border-radius: 3px;
+                color: lightgray;
+                cursor: pointer;
+                box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            }
+            .card2 p
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 10px;
+            }
+            .card2 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 35px;
+                margin-right: 5px;
+                margin-top: 20px;
+            }
+            .card2 button:hover
+            {
+                background-color: black;
+                border-radius: 3px;
+                color: lightgray;
+                cursor: pointer;
+                box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            }
+            .card3 p
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 10px;
+            }
+            .card3 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 35px;
+                margin-right: 5px;
+                margin-top: 20px;
+            }
+            .card3 button:hover
+            {
+                background-color: black;
+                border-radius: 3px;
+                color: lightgray;
+                cursor: pointer;
+                box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            }
+            .card4 p
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 10px;
+            }
+            .card4 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 35px;
+                margin-right: 5px;
+                margin-top: 20px;
+            }
+            .card4 button:hover
+            {
+                background-color: black;
+                border-radius: 3px;
+                color: lightgray;
+                cursor: pointer;
+                box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            }
+            .card5 p
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 10px;
+            }
+            .card5 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 35px;
+                margin-right: 5px;
+                margin-top: 20px;
+            }
+            .card5 button:hover
+            {
+                background-color: black;
+                border-radius: 3px;
+                color: lightgray;
+                cursor: pointer;
+                box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            }
+            .card6 p
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-top: 10px;
+            }
+            .card6 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 35px;
+                margin-right: 5px;
+                margin-top: 20px;
+            }
+            .card6 button:hover
+            {
+                background-color: black;
+                border-radius: 3px;
+                color: lightgray;
+                cursor: pointer;
+                box-shadow: rgba(149, 157, 165, 0.6) 0px 8px 24px;
+            }
+            .fccards img:hover
+            {
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            }
+            @media only screen and (min-width:600px)
+            {
+                .fcheading1
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+                text-align: center;
+            }
+                .fcheading1 h1
+            {
+                margin-top: 50px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .fcheading1 h3
+            {
+                margin-top: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+            }
+            .fcheading2
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+            }
+            .fcheading2 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 25px;
+                margin-top: 30px;
+            }
+            .fcheading2 button:hover
+            {
+                background-color: lightgray;
+                color: black;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+                .fcheading
+            {
+                display: none;
+            }
+            
+            .fccard1{grid-template-columns: auto auto;}
+                .fccard2{grid-template-columns: auto auto;}
+            }
+            @media only screen and (min-width:800px)
+            {
+                .fc{display: inline-flex; flex-direction: row;}
+                .fccards
+            {
+                margin: 20%;
+                margin-top: 40px;
+                margin-bottom: 0px;
+            }
+                .fcheading
+                {
+                    display: grid;
+                    grid-template-rows: auto auto auto;
+                    justify-items: start;
+                }
+            .fcheading
+            {
+                background-color: white;
+                width: 25%;
+                margin-top: 40px;
+                margin-left: 30px;
+            }
+            .fcheading h1
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .fcheading h3
+            {
+                margin-top: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+            }
+            .fcheading button
+            {
+                margin-top: 20px;
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 10px;
+            }
+            .fcheading button:hover
+            {
+                background-color: lightgray;
+                color: black;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            
+            .fccard1{grid-template-columns: auto auto;}
+                .fccard2{grid-template-columns: auto auto;}
+            .fcheading1{display: none;}
+            .fcheading2{display: none;}
+            }
+            @media only screen and (min-width:990px)
+            {
+                .fc{display: inline-flex; flex-direction: row;}
+                .fccards
+            {
+                margin: 20%;
+                margin-top: 40px;
+                margin-bottom: 0px;
+            }
+                .fcheading
+                {
+                    display: grid;
+                    grid-template-rows: auto auto auto;
+                    justify-items: start;
+                }
+            .fcheading
+            {
+                background-color: white;
+                width: 25%;
+                margin-top: 40px;
+                margin-left: 30px;
+            }
+            .fcheading h1
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .fcheading h3
+            {
+                margin-top: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+            }
+            .fcheading button
+            {
+                margin-top: 20px;
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 10px;
+            }
+            .fcheading button:hover
+            {
+                background-color: lightgray;
+                color: black;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            
+            .fccard1{grid-template-columns: auto auto auto;}
+                .fccard2{grid-template-columns: auto auto auto;}
+            .fcheading1{display: none;}
+            .fcheading2{display: none;}
+            }
+
+            
+
+
+
+            hr
+            {
+                width: 80%;
+                height: 2px;
+                border-radius: 2px;
+                background-color: black;
+                margin-top: 50px;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+
+
+
+            /* EXPLOREBYARTWORKS */
+            .explore1
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+                margin-top: 50px;
+            }
+            .explore1
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            
+            
+            
+            .outerdiv1
+            {
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 80%;
+                margin-left: 40px;
+                margin-top: 50px;
+                text-align: left;
+                gap: 30px;
+            }
+            .outerdiv1 img
+            {
+                border-radius: 10px;
+            }
+            .outerdiv1 img:hover
+            {
+                box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            }
+            .outerdiv1 h4
+            {
+                margin-top: 20px;
+                margin-bottom: 25px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .outerdiv1 p
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+            }
+
+            .outerdiv2
+            {
+                display: grid;
+                grid-template-columns: auto auto;
+                width: 80%;
+                margin-left: 40px;
+                margin-top: 50px;
+                text-align: left;
+                gap: 30px;
+            }
+            .outerdiv2 img
+            {
+                border-radius: 10px;
+            }
+            .outerdiv2 img:hover
+            {
+                box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            }
+            .outerdiv2 h4
+            {
+                margin-top: 20px;
+                margin-bottom: 25px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .outerdiv2 p
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+            }
+            .explore2
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+            }
+            .explore2 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 10px;
+                margin-top: 50px;
+            }
+            .explore2 button:hover
+            {
+                background-color: lightgray;
+                color: black;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .explore
+            {
+                display: none;
+            }
+            @media only screen and (min-width:600px)
+            {
+                .explore1
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+                margin-top: 50px;
+            }
+            .explore1
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .explore2
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+            }
+            .explore2 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 10px;
+                margin-top: 50px;
+            }
+            .explore2 button:hover
+            {
+                background-color: lightgray;
+                color: black;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .explore
+            {
+                display: none;
+            }
+            .outerdiv1{grid-template-columns: auto auto auto auto;}
+            .outerdiv2{grid-template-columns: auto auto auto auto;}
+            }
+            
+            @media only screen and (min-width:800px)
+            {
+                .explore1
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+                margin-top: 50px;
+            }
+            .explore1
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .explore2
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+            }
+            .explore2 button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 10px;
+                margin-top: 50px;
+            }
+            .explore2 button:hover
+            {
+                background-color: lightgray;
+                color: black;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .explore
+            {
+                display: none;
+            }
+            .outerdiv1{grid-template-columns: auto auto auto auto;}
+            .outerdiv2{grid-template-columns: auto auto auto auto;}
+            }
+            @media only screen and (min-width:990px)
+            {
+            .Explorebyartworks
+            {
+                display: inline-flex;
+            }
+                .explore
+                {
+                    display: grid;
+                    grid-template-columns: auto;
+                }
+            .explore
+            {
+                text-align: right;
+                margin-top: 225px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .explore button
+            {
+                border: none;
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+                padding: 15px 10px;
+                margin-top: 25px;
+            }
+            .explore button:hover
+            {
+                background-color: lightgray;
+                color: black;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+                .explore1
+                {
+                    display: none;
+                }
+                .explore2
+                {
+                    display: none;
+                }
+                .outerdiv1{grid-template-columns: auto auto auto auto auto auto;}
+                .outerdiv2{grid-template-columns: auto auto auto auto auto auto;}
+            }
+            
+
+
+
+
+            /* CUSTOMERS */
+            .Customers
+            {
+                width: 100%;
+                height: 100vh;
+                background-image: url(pexels-chris-f-6664375.jpg);
+                background-size: 100% 100%;
+                top: 70px;
+                background-attachment: fixed;
+                position: relative;
+            }
+            .customers
+            {
+                display: grid;
+                grid-template-columns: auto auto;
+                padding: 10%;
+                justify-content: center;
+                gap: 30px;
+                position: relative;
+                top: 60px;
+                text-align: center;
+            }
+            .customers h1
+            {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .customers h3
+            {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .country
+            {
+                background-color: white;
+                color: black;
+                padding: 40px;
+            }
+            .clients
+            {
+                background-color: white;
+                color: black;
+                padding: 40px;
+            }
+            .returnc
+            {
+                background-color: white;
+                color: black;
+                padding: 40px;
+            }
+            .Products
+            {
+                background-color: white;
+                color: black;
+                padding: 40px;
+                
+            }
+            @media only screen and (min-width:600px)
+            {
+                .customers{grid-template-columns: auto auto;}
+            }
+            @media only screen and (min-width:800px)
+            {
+                .customers{grid-template-columns: auto auto auto auto;}
+            }
+            
+
+
+
+
+            /* NEWLUANCH */
+            .Newlaunches
+            {
+                width: 100%;
+            }
+            .nlinnerdiv
+            {
+                display: grid;
+                grid-template-columns: auto;
+                gap: 50px;
+                position: relative;
+                top: 80px;
+                background-color: white;
+                justify-content: center;
+                text-align: center;
+            }
+            .Newlaunches h1
+            {
+                top: 40px;
+                position: relative;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+            }
+            .nlinnerdiv h4
+            {
+                margin-top: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .nlinnerdiv h3
+            {
+                margin-top: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .Newlaunches
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .button
+            {
+                display: grid;
+                grid-template-columns: auto;
+                align: center;
+            }
+            .button button
+            {
+                border: none;
+                border-radius: 3px;
+                padding: 15px 10px;
+                background-color: black;
+                color: white;
+                top: 100px;
+                position: relative;
+            }
+            .Newlaunches button:hover
+            {
+                background-color: transparent;
+                color: black;
+                border: 1px solid black;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+            .Newlaunches img:hover
+            {
+                opacity: 0.8;
+                box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+            }
+            @media only screen and (min-width:600px)
+            {
+                .nlinnerdiv{grid-template-columns: auto auto auto;}
+            }
+            
+            
+
+
+
+
+            /* YOUR REVIEW */
+            .yourreview
+            {
+                display: grid;
+                grid-template-columns: auto;
+            }
+            .Yourreview
+            {
+                width: 80%;
+                margin: 10%;
+                margin-top: 180px;
+            }
+
+            .yourreview
+            {
+                padding: 40px;
+                background-color:black;
+                color: white;
+                text-align: center;
+            }
+            .yourreview h1
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 500;
+            }
+            .input
+            {
+                display: grid;
+                grid-template-columns: auto;
+                justify-content: center;
+            }
+            input[type=email]
+            {
+                border: none;
+                background-color: white;
+                padding: 15px 35px;
+                margin-top: 50px;
+            }
+            .yourreview button
+            {
+                border: 1px solid white ;
+                background-color: transparent;
+                color: white;
+                padding: 15px 10px;
+                margin-top: 20px;
+                border-radius: 3px;
+            }
+            .yourreview button:hover
+            {
+                background-color: white;
+                color: black;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+
+
+
+            /* FOOTER */
+            .Footer
+            {
+                background-color: black;
+                width: 100%;
+            }
+            .footer
+            {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                gap: 50px;
+                justify-content: center;
+                color: white;
+            }
+            .footer
+            {
+                margin: 10%;
+                padding-top: 20px;
+            }
+            .footer h3
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+            .footer li
+            {
+                list-style-type: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+                margin-bottom: 2px;
+            }
+            .socialmedia
+            {
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 10px;
+                justify-content: center;
+                margin-top: 30px;
+            }
+            .socialmedia button
+            {
+                border: none;
+                background-color: transparent;
+                color: white;
+                padding: 10px;
+                border-radius: 3px;
+            }
+            .socialmedia button:hover
+            {
+                background-color: white;
+                color: black;
+                border-radius: 3px;
+            }
+            footer hr
+            {
+                margin-top: 10px;
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+                background-color: white;
+            }
+            footer h5
+            {
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: lighter;
+                color: white;
+                margin-top: 15px;
+                margin-bottom: 10px;
+            }
+            @media only screen and (max-width:600px)
+            {
+                .footer{grid-template-columns: auto auto;}
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <section class="Discount-coupon">
+                <div>
+                    <h3>FLAT 10% OFF ON ALL PRODUCTS, USE CODE : ARTSTORE10</h3>
+                </div>
+            </section>
+            <section class="navbar">
+                <nav>
+                    <div class="logo"> <img src="logo1.svg" alt=""></div>
+                    <input type="checkbox" id="menu-bar">
+                    <label for="menu-bar"><img src="hamburger.png" alt="" height="50px" width="50px"></label>
+                    <ul>
+                        <li>HOME</li>
+                        <li class="submenu-hover">
+                            <a href="#">ARTSUPPLIES</a>
+                            <ul class="submenu">
+                                <li><a href="#">Paint Brush Sets</a></li>
+                                <li><a href="#">Art Papers & Surfaces</a></li>
+                                <li><a href="#">Palettes</a></li>
+                                <li><a href="#">Easels</a></li>
+                                <li><a href="#">Painting Kits & Combos</a></li>
+                                <li><a href="#">Paints & Colors</a></li>
+                                <li><a href="#">Other Art & Craft Supplies</a></li>
+                                <li><a href="#">Sketching & Dry Media</a></li>
+                            </ul>
+                        </li>
+                        <li>ARTWORKS</li>
+                        <li>ABOUT</li>
+                        <li>CONTACT</li>
+                    </ul>
+                    <div class="icons">
+                        <img class="img1" src="ssearch.png" alt="" height="26px" width="26px">
+                        <img class="img2" src="profile.jpg" alt="" height="30px" width="30px">
+                        <img class="img3" src="addtobag.png" alt="" height="32px" width="32px">
+                    </div>
+                </nav>
+                
+            </section>
+
+
+            <section class="image-slider">
+                <div class="lpheading"><h1> CHECK OUT </h1><br> <h2>OUR COLLECTION NOW</h2></div>
+                <div class="lpbutton"><button>SHOP ART SUPPLIES</button> <button>SHOP ARTWORKS</button></div>
+            </section>
+
+
+            <section class="Featured-collection">
+                <div class="fc">
+                    <div class="fcheading1">
+                        <h1>FEATURED COLLECTION</h1>
+                        <h3>Discover our Best Products for choosen Creatives like you!</h3>
+                    </div>
+                    
+                <div class="fcheading">
+                    <div>
+                    <h1>FEATURED <br> COLLECTION</h1>
+                    <h3>Discover our <br> Best Products <br> for choosen <b></b>Creatives</b> <br> like you!</h3>
+                    <button>SHOP ART SUPPLIES</button>
+                </div>
+                </div>
+                <div class="fccards">
+                <div class="fccard1">
+                    <div class="card1">
+                        <img src="paintbrushes.jpg" alt="" height="200px" width="170px">
+                        <p>Paint Brushes</p>
+                        <button>SHOP NOW</button>
+                    </div>
+                    <div class="card2">
+                        <img src="artistpapers.jpg" alt="" height="200px" width="170px">
+                        <p>Art Papers & Surfaces</p>
+                        <button>SHOP NOW</button>
+                    </div>
+                    <div class="card3">
+                        <img src="easels.jpg" alt="" height="200px" width="170px">
+                        <p>Easels</p>
+                        <button>SHOP NOW</button>
+                    </div>
+
+                </div>
+                <div class="fccard2">
+                    
+                    <div class="card4">
+                        <img src="COLORS_.jpg" alt="" height="200px" width="170px">
+                        <p>Colors & Paints</p>
+                        <button>SHOP NOW</button>
+                    </div>
+                    <div class="card5">
+                        <img src="sketching&drymedia.jpg" alt="" height="200px" width="170px">
+                        <p>Sketching & Dry Media</p>
+                        <button>SHOP NOW</button>
+                    </div>
+                    <div class="card6">
+                        <img src="paintkits.jpg" alt="" height="200px" width="170px">
+                        <p>Painting Kits & Combo</p>
+                        <button>SHOP NOW</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+            <div class="fcheading2"><button>SHOP ART SUPPLIES</button></div>
+            
+
+            </section>
+
+            <hr>
+
+
+            <section class="Explorebyartworks">
+                <div class="explore1">
+                    <h1>EXPLORE BY ARTWORKS</h1>
+                    
+                </div>
+                        <div class="outerdiv">
+                        <div class="outerdiv1">
+                            <div> <img src="pexels-greta-hoffman-7859524.jpg" alt="" height="150px" width="150px"></div>
+                            <div> 
+                                <h4>Watercolor</h4>
+                                <p>Expressive <br> Watercolor Art for your <br> space.</p>
+                            </div>
+                            <div> <img src="pexels-fiona-art-3808449.jpg" alt="" height="150px" width="150px"></div>
+                            <div> 
+                                <h4>Oil</h4>
+                                <p>Timeless Oil <br>Paintings  for your <br> walls.</p>
+                            </div>
+                            <div> <img src="acrylic.jpg" alt="" height="150px" width="150px"></div>
+                            <div> 
+                                <h4>Watercolor</h4>
+                                <p>Dynamic Acrylic <br> Pieces for all Art <br> buffs.</p>
+                            </div>
+                        </div>
+        
+                        <div class="outerdiv2">
+                            <div> <img src="inkandpen.jpg" alt="" height="150px" width="150px"></div>
+                            <div> 
+                                <h4>Ink & Pen</h4>
+                                <p>Fine Lines, <br> Endless Imaginations</p>
+                            </div>
+                            <div> <img src="pexels-anni-roenkae-3109830.jpg" alt="" height="150px" width="150px"></div>
+                            <div> 
+                                <h4>Mixed Media</h4>
+                                <p>Artistic Fusion, <br> Captivating Creations.</p>
+                            </div>
+                            <div> <img src="sketch.jpg" alt="" height="150px" width="150px"></div>
+                            <div> 
+                                <h4>Sketch & <br>Dry Media</h4>
+                                <p>Captivating Sketches <br> for your collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="explore2">
+                        <button>SHOP ARTWORKS</button>
+                    </div>
+        
+                        <div class="explore">
+                            <h1>EXPLORE <br> BY <br> ARTWORKS</h1>
+                            <button>SHOP ARTWORKS</button>
+                        </div>
+                    </section>
+
+            
+            <section class="Customers">
+                <div class="customers">
+                <div class="country"><h1>10 +</h1> <br> <h3>COUNTRIES</h3></div>
+                <div class="clients"><h1>40,000 +</h1> <br> <h3>HAPPY CUSTOMERS</h3></div>
+                <div class="returnc"><h1>84 %</h1> <br> <h3>RETURN CUSTOMERS</h3></div>
+                <div class="Products"><h1>150 +</h1> <br> <h3>PRODUCTS</h3></div>
+            </div>
+            </section>
+
+
+            <section class="Newlaunches">
+                <div class="nlouterdiv">
+                <h1> NEW LAUNCHES </h1>
+                <div class="nlinnerdiv">
+                    <div class="nlcard1">
+                        <img src="61Qoiw7MCuL._SX679_.jpg" alt="" height="200px" width="200px">
+                        <h4>Professional Painting Kit</h4>
+                        <h3>PRICE : $15 </h3>
+                    </div>
+                    <div class="nlcard2">
+                        <img src="sketch.jpg" alt="" height="200px" width="200px">
+                        <h4>Spiral Bound A3 Sketch Book</h4>
+                        <h3>PRICE : $7.09 </h3>
+                    </div>
+                    <div class="nlcard3">
+                        <img src="516LTftasaL._SX679_.jpg" alt="" height="200px" width="200px">
+                        <h4>Professional Painting Kit-44Ps</h4>
+                        <h3>PRICE : $20 </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="button"><button>SHOW ALL</button></div>
+            </section>
+
+
+            <section class="Yourreview">
+                <div class="yourreview">
+                    <h1>NEWSLETTER</h1>
+                    <input type="email" name="email" placeholder="Enter your Email Id..."><br>
+                    <button>SUBMIT</button>
+                </div>
+            </section>
+
+
+
+            <section class="Footer">
+                <footer>
+                    <div class="footer">
+                        <div>
+                            <h3>ABOUT</h3>
+                            <p>Welcome to Artstore, your gateway to a world of artistic possibilities. As purveyors of premium art supplies, we empower creativity with tools that inspire mastery.Unleash your inner artist and embark on a path of boundless discovery with Artstore. #ArtMeansArtRight</p>
+                        </div>
+                        <div>
+                            <h3>OUR POLICIES</h3>
+                            <li>Search</li>
+                            <li>FAQs</li>
+                            <li>Contact us</li>
+                            <li>Blogs</li>
+                            <li>Terms of Service</li>
+                        </div>
+                        <div>
+                            <h3>OUR POLICIES</h3>
+                            <li>Privacy Policy</li>
+                            <li>Refund Policy</li>
+                            <li>Shipping Policy</li>
+                            <li>Terms of Service</li>
+                        </div>
+                        <div>
+                            <h3>OUR COMMITMENT</h3>
+                            <li> 100% Satisfaction Guarantee</li>
+                            <li>Customer Support</li>
+                            <li>Cruelty-Free</li>
+                            <li>Handcrafted</li>
+                        </div>
+                    </div>
+                    <div class="socialmedia">
+                        <div><button>INSTAGRAM</button></div>
+                        <div><button>FACEBOOK</button></div>
+                    </div>
+                    <hr>
+                    <h5>©Artstore.in</h5>
+                </footer>
+            </section>
+        </div>
+    </body>
+</html>
